@@ -1,4 +1,4 @@
-import { StatusType } from 'Types/Types';
+import { ProfileType } from 'Types/Types';
 
 import {
   FetchProfile,
@@ -16,33 +16,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 type initialStateType = {
   status: string;
-  value: {
-    career: string;
-    email: string;
-    id: number;
-    introduction: string;
-    lectureFee: string;
-    name: string;
-    offLine: boolean;
-    onLine: boolean;
-    option: string;
-    profileImg: string;
-    regions: string[];
-    subjects: string[];
-    teacher: boolean;
-    userId: number;
-    matches: [
-      {
-        matchId: 0;
-        date: string;
-        timeslot: string;
-        status: StatusType;
-        studentName: string;
-        subjects: [];
-        teacherName: string;
-      },
-    ];
-  };
+  value: ProfileType;
   error: string | null;
 };
 
